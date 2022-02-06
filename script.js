@@ -1,12 +1,13 @@
+require('dotenv').config()
 const express = require('express')
 const path = require('path')
 const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const Todo = require('./models/todo')
-const PORT = process.env.PORT||3000
+const PORT = process.env.PORT
 
-mongoose.connect('mongodb://localhost/firstmongo', { useNewUrlParser: true,useUnifiedTopology: true } )
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true,useUnifiedTopology: true } )
 
 app.use('/', express.static(path.resolve(__dirname, 'assets')))
 
