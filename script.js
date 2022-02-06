@@ -4,8 +4,9 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 const Todo = require('./models/todo')
+const PORT = process.env.PORT||3000
 
-mongoose.connect('mongodb://localhost/firstmongo')
+mongoose.connect('mongodb://localhost/firstmongo', { useNewUrlParser: true,useUnifiedTopology: true } )
 
 app.use('/', express.static(path.resolve(__dirname, 'assets')))
 
@@ -64,6 +65,7 @@ app.post('/api/create', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-app.listen(13371, '127.0.0.1', () => {
+app.listen(PORT, '127.0.0.1', () => {
 	console.log('Server up')
+	console.log(PORT);
 })

@@ -1,13 +1,29 @@
 {
-  "name": "node-mongodb",
+  "name": "node-mongodb-todo-master",
   "version": "1.0.0",
-  "main": "index.js",
-  "license": "MIT",
+  "description": "",
+  "main": "script.js",
   "dependencies": {
     "body-parser": "^1.19.0",
     "expres": "^0.0.5",
     "express": "^4.17.1",
     "mongoose": "^5.10.9",
     "nodemon": "^2.0.15"
-  }
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev" : "nodemon script.js",
+    "start": "node scipt.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thakurdivyanshu/todoMongoDB.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/thakurdivyanshu/todoMongoDB/issues"
+  },
+  "homepage": "https://github.com/thakurdivyanshu/todoMongoDB#readme"
 }
