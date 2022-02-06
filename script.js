@@ -66,7 +66,7 @@ app.post('/api/create', async (req, res) => {
 	res.json({ status: 'ok' })
 })
 
-app.listen(PORT, '127.0.0.1', () => {
+app.listen(PORT, () => {
 	console.log('Server up')
 	console.log(PORT);
 })
